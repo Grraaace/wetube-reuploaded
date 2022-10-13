@@ -1,0 +1,63 @@
+@keyframes recording {
+    from {
+        background-color: $red;
+    }
+    to {
+        background-color: $bg;
+    }
+}
+
+#recorderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    #preview {
+        width: 40%;
+        margin-bottom: 10px;
+    }
+
+    #buttonContainer {
+        position: relative;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #circle-recording {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color:red;
+        animation: recording 1s infinite;
+    }
+
+    #actionBtn {
+        background-color: $red;
+        color: white;
+        font-size: 13px;
+        border-style: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+
+    #reset {
+        position: absolute;
+        bottom: 3px;
+        right: 0px;
+        background-color: transparent;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        border-style: none;
+    }
+
+    #reset:hover {
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,20 @@
+mixin comment(comment)
+    div.video__comment
+        div.video__comment-column 
+            if !comment.owner.avatarUrl
+                span 😀
+            else
+                if comment.owner.avatarUrl[0] === "u"
+                    img(src="/" + comment.owner.avatarUrl)
+                else 
+                    img(crossorigin="anonymous" src=comment.owner.avatarUrl)
+        div.video__comment-column
+            div.video__comment-data(data-commentId=comment.id)
+                span.video__comment-author=comment.owner.username
+                span.video__comment-date=comment.createAt
+                if String(loggedInUser._id) === String(comment.owner.id) 
+                    span.fa-solid.fa-trash
+            div
+                span=comment.text
+        
+

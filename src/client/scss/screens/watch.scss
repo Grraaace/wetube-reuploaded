@@ -1,0 +1,126 @@
+#video-details {
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 700px;
+
+    h1 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    span {
+        display: block;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    #video-details_owner {
+        display: flex;
+        align-items: center;
+
+        a {
+            margin-left: 3px;
+            text-decoration: underline;
+            color: grey;
+        }
+    }
+
+    #video-edit,
+    #video-delete {
+        font-size: 15px;
+        text-decoration: underline;
+    }
+}
+
+.video__add-comments {
+    margin: 0 auto;
+    max-width: 700px;
+    margin-top: 30px;
+
+    .video__comment-form {
+        display: flex;
+        flex-direction: column;
+        textarea {
+            height: 60px;
+            background-color:black;
+            border-style: none;
+            color: white;
+            transition: 1s;
+    
+        }
+
+        textarea:focus {
+            outline: none;
+            border-bottom: 1px white solid;
+        }
+
+        button {
+            margin-top: 7px;
+            background-color: white;
+            color: black;
+            border-radius: 9999px;
+            border-style: none;
+            padding: 5px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+#video__comments {
+    margin: 0 auto;
+    max-width: 700px;
+    margin-top: 30px;
+    .video__comment {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+
+        .video__comment-column:first-child {
+            width: 40px;
+            margin-right: 10px;
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            span {
+                font-size: 40px;
+            }
+        }
+        .video__comment-column:last-child {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3px;
+            .video__comment-data {
+                display: flex;
+                justify-content: flex-start;
+                .video__comment-author {
+                    font-size: 12px;
+                    margin-right: 5px;
+                    font-weight: 800px;
+                    margin-bottom: 2px;
+                }
+                .video__comment-date {
+                    font-size: 12px;
+                    color: gray;
+
+                }
+                .fa-solid.fa-trash {
+                    font-size: 15px;
+                    margin-left: 5px;
+                }
+
+                .fa-solid.fa-trash:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+article {
+    display: none;
+}

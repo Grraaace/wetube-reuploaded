@@ -1,0 +1,26 @@
+extends base
+
+block content 
+    if errorMessage 
+        span=errorMessage
+    form(method="POST", enctype="multipart/form-data").edit-profile__form
+        label(for="avartar") Avatar
+        input(type="file", id="avatar", name="avatar", accept="image/*")
+        input(name="name", placeholder="Name", required, type="text", value=loggedInUser.name )
+        input(name="email", placeholder="Email", required, type="email", value=loggedInUser.email )
+        input(name="username", placeholder="Username", required, type="text", value=loggedInUser.username )
+        input(name="location", placeholder="Location", type="text", value=loggedInUser.location )
+        input(value="Update Profile", type="submit")
+        if !loggedInUser.socialOnly 
+            div.edit-profile__password
+                a(href="change-password") Change Password &rarr;
+
+//-     const userSchema = new mongoose.Schema({
+//-     email: { type: String, required: true, unique: true },
+//-     socialOnly: { type: Boolean, default: false},
+//-     avatarUrl: { type: String },
+//-     username: { type: String, required: true, unique: true },
+//-     password: { type: String, required: false },
+//-     name: { type: String, required: false },
+//-     location: String,
+//- });
