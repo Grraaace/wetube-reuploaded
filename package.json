@@ -7,7 +7,7 @@
     "url": "git+https://github.com/Grraaace/wetube-reuploaded.git"
   },
   "scripts": {
-    "start": "node build/init.js",
+    "start": "node ./build/init.js",
     "build": "npm run build:server && npm run build:assets",
     "build:assets": "webpack --mode=production",
     "build:server": "babel src -d build",
