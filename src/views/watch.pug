@@ -4,7 +4,7 @@ include mixins/comment
 block content
    div#video__div
       div#videoContainer(data-id=video._id data-username=loggedInUser.username data-avatarurl=loggedInUser.avatarUrl)
-         video#video(src="/" + video.videoUrl, width="100%")
+         video#video(src=video.videoUrl, width="100%", crossorigin="anonymous")
          div#videoControls 
             div
                input#timeline(type="range", step="1", value="0", min="0")

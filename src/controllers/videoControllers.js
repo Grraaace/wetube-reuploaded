@@ -81,8 +81,8 @@ export const postUpload = async (req, res) => {
         session: { user: _id },
         body: { title, description, hashtags },
         files: { 
-            video: [ { path: videoUrl } ], 
-            thumbnail: [ { path: thumbnailUrl} ],
+            video: [ { location: videoUrl } ], 
+            thumbnail: [ { location: thumbnailUrl} ],
         }, 
     } = req;
     try{
